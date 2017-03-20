@@ -1,6 +1,7 @@
 #!/bin/sh
 
-if [[ ! -v IMAGE ]]
+
+if [ ! -n "${IMAGE+1}" ]
 then
     echo "Error: you should run '. set_env.sh'."
     exit 1
