@@ -1,0 +1,19 @@
+node {
+    stage 'Checkout'
+    checkout scm
+    
+    stage 'Build image'
+    sh '''
+        cd ./ci
+        . ./set_env.sh	
+        sh build.sh
+    '''
+    
+    stage 'Run'
+    sh '''
+        cd ./ci
+        . ./set_env.sh	
+        sh run.sh
+    ''' 
+}
+
