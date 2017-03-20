@@ -6,5 +6,5 @@ then
     exit 1
 fi
 
-docker run --rm -it ${IMAGE} /sample_for_jenkins_build_pipeline/hello_world
+docker run --rm ${IMAGE} /sample_for_jenkins_build_pipeline/hello_world
 
