@@ -7,7 +7,7 @@ then
     exit 1
 fi
 
-LOCAL_REGISTRY_TAG="registry:5000/${IMAGE}"
+LOCAL_REGISTRY_TAG="localhost:5000/${IMAGE}"
 
 cd ../
 docker build -t ${IMAGE} -f ./docker/Dockerfile .
